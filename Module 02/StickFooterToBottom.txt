@@ -1,0 +1,20 @@
+<body class="flex flex-col min-h-screen">
+<header class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4">
+        <h1 class="text-2xl font-bold">Header</h1>
+    </div>
+</header>
+
+<main class="flex-grow">
+    <div class="container mx-auto px-4 py-8">
+        <h2 class="text-xl font-bold">Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod enim a nisl commodo congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    </div>
+</main>
+
+<footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4">
+        <p>&copy; 2023 Tailwind Example. All rights reserved.</p>
+    </div>
+</footer>
+</body>
