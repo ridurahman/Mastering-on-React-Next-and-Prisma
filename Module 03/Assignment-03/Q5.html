@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 05</title>
+  </head>
+  <body>
+    <script>
+      //Q5-a
+      function findBrowserDetails() {
+        let details = {
+          browserName: navigator.appName,
+          browserVersion: navigator.appVersion,
+        };
+        return details;
+      }
+
+      //Q5-b
+      var result = findBrowserDetails();
+      for (let x in result) {
+        console.log(`${x}: ${result[x]}`);
+      }
+    </script>
+  </body>
+</html>

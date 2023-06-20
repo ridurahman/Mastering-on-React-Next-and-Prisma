@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module-03 Assignment</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Implementation of Q1
+      */
+      function dateFormate(date) {
+        if (date) {
+          var newDate = new Date(date);
+        } else {
+          var newDate = new Date();
+        }
+
+        return newDate.getDay();
+      }
+      //Result Q1-a
+      let resultAnyDate = dateFormate("2023-06-18");
+      console.log(`Week Day of the given date is: ${resultAnyDate}`);
+      //Result Q1-b
+      let resultCurrentDate = dateFormate();
+      console.log(`Week Day of the current date is: ${resultCurrentDate}`);
+
+      /*
+        Implementation of Q2
+      */
+    </script>
+  </body>
+</html>

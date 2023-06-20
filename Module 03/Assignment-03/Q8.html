@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 08</title>
+  </head>
+  <body>
+    <!--   Q8-a   -->
+    <button id="btn" onclick="changeContent()">Click</button>
+    <p id="para">Change this by clicking the button</p>
+
+    <script>
+      //Q8-b
+      function changeContent() {
+        let item = document.getElementById("para");
+        item.innerHTML = "Button Clicked!";
+      }
+    </script>
+  </body>
+</html>

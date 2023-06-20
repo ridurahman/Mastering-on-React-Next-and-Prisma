@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 14</title>
+  </head>
+  <body>
+    <button onclick="ExcGetRequest()">Click</button>
+    <script>
+      function ExcGetRequest() {
+        var URL = "https://api.example.com/data";
+        var Configuration = { method: "GET" };
+
+        fetch(URL, Configuration)
+          .then((response) => response.json())
+          .then((result) => console.log(result))
+          .catch((err) => console.log(err));
+      }
+    </script>
+  </body>
+</html>

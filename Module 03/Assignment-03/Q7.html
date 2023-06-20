@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      div {
+        margin: 20px;
+      }
+    </style>
+    <title>Question 07</title>
+  </head>
+  <body onclick="displayClickAlert(event)">
+    <div>
+      <input type="text" size="40" onkeydown="displayKeyboardAlert(event)" />
+    </div>
+    <div>
+      <img
+        id="myImg"
+        onmouseover="changeImage()"
+        onmouseleave="changeImagePrevious()"
+        src="https://images.unsplash.com/photo-1509514026798-53d40bf1aa09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+        alt=""
+      />
+    </div>
+
+    <script>
+      //Q7-a
+      function displayClickAlert(event) {
+        let x = event.screenX;
+        let y = event.screenY;
+        alert(`X coords: ${x} , Y coords: ${y}`);
+      }
+
+      //Q7-b
+      function displayKeyboardAlert() {
+        let key = event.key;
+        alert(`You pressed: ${key}`);
+      }
+
+      //Q7-c
+      function changeImage() {
+        var myImg = document.getElementById("myImg");
+
+        myImg.src =
+          "https://images.unsplash.com/photo-1501183007986-d0d080b147f9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80";
+      }
+      function changeImagePrevious() {
+        var myImg = document.getElementById("myImg");
+
+        myImg.src =
+          "https://images.unsplash.com/photo-1509514026798-53d40bf1aa09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80";
+      }
+    </script>
+  </body>
+</html>
