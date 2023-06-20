@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 03</title>
+  </head>
+  <body>
+    <script>
+      //Q3-a
+      function checkPrimeNumber(num) {
+        if (num === 1) {
+          console.log("1 is neither prime nor composite number.");
+        } else if (num > 1) {
+          for (let i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+
+      //Q3-b
+      var resultPrime = checkPrimeNumber(11);
+      if (resultPrime) {
+        document.write(`The given number is prime`);
+      } else {
+        document.write(`The given number is not prime`);
+      }
+    </script>
+  </body>
+</html>

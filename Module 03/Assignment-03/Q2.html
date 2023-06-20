@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 02</title>
+  </head>
+  <body>
+    <script>
+      //Q2-a
+      function squareRootOfSumOfSquares(numberArray) {
+        let sum = 0;
+        for (let i = 0; i < numberArray.length; i++) {
+          sum += Math.pow(numberArray[i], 2);
+        }
+        return Math.sqrt(sum);
+      }
+
+      //Q2-b
+      let newArray = [3, 4, 5, 1, 2, 3];
+
+      let squareRoot = squareRootOfSumOfSquares(newArray);
+
+      document.write(
+        `Square root of the sum of the squares of [ ${newArray} ] is: ${squareRoot}`
+      );
+    </script>
+  </body>
+</html>

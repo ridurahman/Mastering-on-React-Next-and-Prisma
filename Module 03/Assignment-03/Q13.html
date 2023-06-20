@@ -23,8 +23,12 @@
       function changeColor() {
         var paragraphs = document.querySelectorAll(".toRed");
 
-        for (let i = 0; i < paragraphs.length; i++) {
-          paragraphs[i].style.color = "red";
+        // for (let i = 0; i < paragraphs.length; i++) {
+        //   paragraphs[i].style.color = "red";
+        // }
+        for (const x of paragraphs) {
+          x.style.color = "red";
+          console.log(x);
         }
       }
       changeColor();

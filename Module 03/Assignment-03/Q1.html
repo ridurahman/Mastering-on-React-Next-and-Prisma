@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 01</title>
+  </head>
+  <body>
+    <script>
+      var days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+
+      function dateFormate(date) {
+        if (date) {
+          var newDate = new Date(date);
+        } else {
+          var newDate = new Date();
+        }
+
+        return days[newDate.getDay()];
+      }
+      //Result Q1-a
+      let resultAnyDate = dateFormate("2023-06-18");
+      document.write(`Week Day of the given date is: ${resultAnyDate} <br>`);
+      //Result Q1-b
+      let resultCurrentDate = dateFormate();
+      document.write(
+        `Week Day of the current date is: ${resultCurrentDate} <br>`
+      );
+    </script>
+  </body>
+</html>
