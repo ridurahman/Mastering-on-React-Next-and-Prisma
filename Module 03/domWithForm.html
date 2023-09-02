@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="num1" /><br /><br />
+    <input type="number" id="num2" /><br /><br />
+
+    <button onclick="addTwoNumbers()">Add</button>
+
+    <script>
+      function addTwoNumbers() {
+        var num1 = document.getElementById("num1").value; //value will be in string format
+        var num2 = document.getElementById("num2").value;
+
+        var result = parseFloat(num1) + parseFloat(num2);
+
+        alert(parseFloat(num1) + parseFloat(num2));
+      }
+    </script>
+  </body>
+</html>

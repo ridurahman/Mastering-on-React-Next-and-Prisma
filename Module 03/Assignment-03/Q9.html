@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      label,
+      input,
+      #btn,
+      #errorContainer {
+        margin: 10px;
+        padding: 0 30px;
+      }
+    </style>
+    <title>Question 09</title>
+  </head>
+  <body>
+    <form id="form">
+      <div>
+        <label for="name">User Name</label>
+        <input type="text" name="name" id="name" placeholder="Name" required />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="abc@example.com"
+          required
+        />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password here"
+          required
+        />
+      </div>
+      <div>
+        <label for="confirmPassword">Password</label>
+        <input
+          type="Password"
+          name="confirmPassword"
+          id="confirmPassword"
+          placeholder="Password again"
+          required
+        />
+      </div>
+      <button id="btn" type="submit">Submit</button>
+      <ul id="errorContainer"></ul>
+    </form>
+
+    <script>
+      function validateForm() {
+        // Retrieve form input values
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirmPassword").value;
+
+        let validNamePattern = /^[a-zA-Z]+$/;
+        let validEmailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
+        let validPasswordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+        // Perform validation
+        const errors = [];
+
+        if (name === "") {
+          errors.push("Name is required");
+        } else if (!validNamePattern.test(name)) {
+          errors.push("Name should contain only letters");
+        }
+
+        if (email === "") {
+          errors.push("Email is required");
+        } else if (!validEmailPattern.test(email)) {
+          errors.push("Email is not valid");
+        }
+
+        if (password === "") {
+          errors.push("Password is required");
+        } else if (!validPasswordPattern.test(password)) {
+          errors.push(
+            "Password should have a minimum length of 8 characters, at least one uppercase letter, one lowercase letter, and one digit"
+          );
+        }
+
+        if (confirmPassword !== password) {
+          errors.push(
+            "Confirm Password does not match with the Password field"
+          );
+        }
+
+        // Display error messages
+        const errorContainer = document.getElementById("errorContainer");
+        errorContainer.innerHTML = "";
+
+        if (errors.length > 0) {
+          for (let i = 0; i < errors.length; i++) {
+            const errorItem = document.createElement("li");
+            errorItem.textContent = errors[i];
+            errorContainer.appendChild(errorItem);
+          }
+          return false;
+        }
+
+        return true;
+      }
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (validateForm()) {
+          // Perform additional processing or submit the form to the server
+          alert("Form submitted successfully!");
+        }
+      });
+    </script>
+  </body>
+</html>

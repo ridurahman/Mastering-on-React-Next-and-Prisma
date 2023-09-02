@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 04</title>
+  </head>
+  <body>
+    <p>
+      New window is opened with the URL "https://www.example.com" and dimensions
+      800x600
+    </p>
+    <script>
+      //Q4-a
+      function newWindow(url, dimensions) {
+        let w = window.open(
+          url,
+          "",
+          "width = " +
+            Number(dimensions.width) +
+            ",height= " +
+            Number(dimensions.height)
+        ); //problem using variable as considering variables as strings, so changed type of variables to Number and it worked
+      }
+
+      //Q4-b
+      var newURL = "https://www.example.com";
+      var newDimensions = { width: 800, height: 600 };
+      newWindow(newURL, newDimensions);
+    </script>
+  </body>
+</html>

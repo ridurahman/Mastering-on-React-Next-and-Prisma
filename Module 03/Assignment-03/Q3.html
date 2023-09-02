@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 04</title>
+  </head>
+  <body>
+    <script>
+      //Q3-a
+      function checkPrimeNumber(num) {
+        let number = Math.abs(num);
+        for (let i = 2; i <= number / 2; i++) {
+          if (number % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      //Q3-b
+      let sampleNumber = 11;
+      var resultPrime = checkPrimeNumber(sampleNumber);
+
+      if (resultPrime) {
+        document.write(`${sampleNumber} is a prime number`);
+      } else {
+        document.write(`${sampleNumber} is a not prime number`);
+      }
+    </script>
+  </body>
+</html>

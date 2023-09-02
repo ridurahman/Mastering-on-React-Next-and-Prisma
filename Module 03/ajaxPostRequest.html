@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="ExecPostRequest()">Execute Post Request</button>
+    <script>
+      function ExecPostRequest() {
+        var URL = "https://crud.teamrabbil.com/api/v1/CreateProduct";
+        var BodyData = {
+          Img: "new Image",
+          ProductCode: "1234",
+          ProductName: "new Product",
+          Qty: "50",
+          TotalPrice: "500",
+          UnitPrice: "10",
+        };
+        var Config = {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(BodyData),
+        };
+
+        fetch(URL, Config)
+          .then((response) => response.json())
+          .then((result) => console.log(result))
+          .catch((err) => console.log(err));
+      }
+    </script>
+  </body>
+</html>

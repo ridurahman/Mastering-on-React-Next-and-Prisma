@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .highlight {
+        background-color: yellow;
+      }
+    </style>
+    <title>Question 10</title>
+  </head>
+  <body>
+    <!--   Q10-a   -->
+    <button id="btn" onclick="changeStyle()">Click</button>
+    <p id="para" class="">Change background by clicking the button</p>
+
+    <script>
+      //Q10-b
+      function changeStyle() {
+        let item = document.getElementById("para");
+        item.classList.add("highlight");
+      }
+    </script>
+  </body>
+</html>

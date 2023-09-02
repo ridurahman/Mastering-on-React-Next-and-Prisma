@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 13</title>
+  </head>
+  <body>
+    <!--  Q13-a  -->
+    <p id="para1" class="toRed">Paragraph One</p>
+    <p id="para2" class="noChange">Paragraph Two</p>
+    <p id="para3" class="toRed">Paragraph Three</p>
+    <p id="para4" class="noChange">Paragraph Four</p>
+    <p id="para5" class="toRed">Paragraph Five</p>
+    <p id="para6" class="noChange">Paragraph Six</p>
+    <p id="para7" class="toRed">Paragraph Seven</p>
+    <p id="para8" class="toRed">Paragraph Eight</p>
+    <p id="para9" class="noChange">Paragraph Nine</p>
+    <p id="para10" class="toRed">Paragraph Ten</p>
+
+    <script>
+      // Q13-b
+      function changeColor() {
+        var paragraphs = document.querySelectorAll(".toRed");
+
+        // for (let i = 0; i < paragraphs.length; i++) {
+        //   paragraphs[i].style.color = "red";
+        // }
+        for (const x of paragraphs) {
+          x.style.color = "red";
+          console.log(x);
+        }
+      }
+      changeColor();
+    </script>
+  </body>
+</html>
