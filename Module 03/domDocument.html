@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <p id="demo"></p>
+    <button onclick="Demo()">Click</button>
+    <button onclick="Demo2()">Click</button>
+    <button onclick="Demo3()">Click</button>
+    <button onclick="Replace()">Click</button>
+
+    <script>
+      function Demo() {
+        var info = document.cookie;
+        document.getElementsByTagName("p")[0].innerHTML = info;
+      }
+      function Demo2() {
+        var info = document.domain;
+        document.getElementsByTagName("p")[0].innerHTML = info;
+      }
+      function Demo3() {
+        var info = document.lastModified;
+        document.getElementsByTagName("p")[0].innerHTML = info;
+      }
+      document.getElementsByTagName("p")[0].innerHTML = document.title;
+      document.getElementById("demo").innerHTML = document.Url;
+
+      function Replace() {
+        document.open("text/html", "Replace"); // (type, reason)
+        document.write("<h2>My Name</h2>");
+        document.close;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <button onclick="Demo()">Click</button>
+    <button onclick="itemsCount()">Click</button>
+
+    <script>
+      function Demo() {
+        let w = window.open();
+        w.document.open();
+        w.document.write("Hello new window");
+        w.document.close();
+      }
+
+      function itemsCount() {
+        let myItems = document.getElementsByTagName("p");
+        let itemCount = myItems.length;
+        alert("The number of p elements in this document is: " + itemCount);
+      }
+    </script>
+  </body>
+</html>

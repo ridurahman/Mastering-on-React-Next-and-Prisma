@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 05</title>
+  </head>
+  <body>
+    <h2>Browser Name: <span id="browserName"></span></h2>
+    <h2>Browser Version: <span id="browserVersion"></span></h2>
+    <script>
+      const browserName = document.getElementById("browserName");
+      const browserVersion = document.getElementById("browserVersion");
+      //Q5-a
+      function findBrowserDetails() {
+        let details = {
+          browserName: navigator.appName,
+          browserVersion: navigator.appVersion,
+        };
+        return details;
+      }
+
+      //Q5-b
+      var result = findBrowserDetails();
+      // for (let x=0; x<result.length; x++) {
+      browserName.innerHTML += result.browserName + "<br>";
+      browserVersion.innerHTML += result.browserVersion + "<br>";
+      // console.log(`${x}: ${result[x]}`);
+
+      //}
+    </script>
+  </body>
+</html>

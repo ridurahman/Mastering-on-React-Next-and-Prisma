@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="objAlert()">Click</button>
+    <button onclick="objConfirm()">Click</button>
+    <button onclick="objPrompt()">Click</button>
+    <button onclick="objPrompt()">Click</button>
+    <button onclick="objOpen()">Click</button>
+    <button onclick="objClose()">Click</button>
+
+    <script>
+      //window object methods
+      function objAlert() {
+        alert("Site Under Construction");
+      }
+      function objConfirm() {
+        let result = confirm("Do you want to delete?");
+        document.write(result);
+      }
+      function objPrompt() {
+        let result = prompt("Write your name");
+        document.write(result);
+      }
+      function objOpen() {
+        open();
+      }
+      function objClose() {
+        close();
+      }
+      setTimeout(function objAlert() {
+        alert("Site Under Construction");
+      }, 5000);
+    </script>
+  </body>
+</html>
