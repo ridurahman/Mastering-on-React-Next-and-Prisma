@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.global-text {
+  color: red;
+}
+
+.active-link {
+  background-color: brown;
+}
+
+.pending-lisk {
+  background-color: blueviolet;
+}
+
+a {
+  color: aliceblue;
+  padding: 5px;
+  margin: 3px;
+}
